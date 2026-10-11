@@ -2,7 +2,7 @@
 
 通过自己的 Ace Data Cloud 账号，在 AstrBot 聊天中分析有处理权限的 HTTPS 图片的人脸关键点。本插件首版**仅提供 Face Analyze**；美化、年龄变化、换脸、卡通化和活体检测尚未包含。
 
-[English guide](../README.md) · [Face API](https://platform.acedata.cloud/documents) · [当前价格](https://platform.acedata.cloud/models)
+[English guide](../README.md) · [Face API](https://platform.acedata.cloud/documents?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=faceastrbot_readme_documents) · [当前价格](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=faceastrbot_readme_pricing)
 
 ## 1. 搜索并安装
 
@@ -12,7 +12,9 @@ AstrBot Cloud 尚未正式上架。源码合并发布后，可在 **Installed �
 
 ## 2. 获取 Key 和获授权的图片
 
-登录 [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications)，复制 **General application** API Key，或在 **Manage Keys → Create** 创建 AstrBot 专用 Key。服务专用 Key 必须允许 `/face/analyze`。Face Analyze 权限可能取决于账号开通情况；调用前检查当前价格和余额。
+首次使用请先注册并登录；如果应用页还没有通用应用，点击 **初始化通用应用（Initialize General Application）**，再按下面步骤管理密钥。
+
+登录 [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=faceastrbot_readme_api_key)，复制 **General application** API Key，或在 **Manage Keys → Create** 创建 AstrBot 专用 Key。服务专用 Key 必须允许 `/face/analyze`。Face Analyze 权限可能取决于账号开通情况；调用前检查当前价格和余额。
 
 只处理自己拥有或获准处理的图片。下方示例是先前生成的虚构测试人像。图片 URL 必须是公开可访问的 HTTPS 链接；插件不会上传本地文件。只复制 Key 本身，不加 `Bearer `，也不要使用 `platform-...` 管理 Token。
 
