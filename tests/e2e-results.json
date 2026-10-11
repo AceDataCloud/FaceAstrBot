@@ -1,0 +1,21 @@
+{
+  "environment": {
+    "astrbot_version": "4.28.2",
+    "installation": "isolated editable local plugin installation",
+    "chat_model": "gpt-4.1-mini through the generic OpenAI-compatible source",
+    "marketplace_installation": "not tested; AstrBot Cloud listing pending"
+  },
+  "chat_tool": "face_analyze",
+  "primary_case": {
+    "input": "previously generated fictional test portrait over HTTPS",
+    "mode": 1,
+    "tool_calls": 1,
+    "status": "succeeded",
+    "face_count": 1,
+    "image_width": 2048,
+    "image_height": 2048,
+    "trace_id_returned": false
+  },
+  "billing_limit": "The tool response contained no trace ID. An application/API/time window is correlation only, not an exact usage-row match.",
+  "scope_limit": "Only keypoint analysis was run through AstrBot chat; other Face Transform actions are not included in this version."
+}

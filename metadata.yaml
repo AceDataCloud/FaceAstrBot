@@ -1,0 +1,13 @@
+name: astrbot_plugin_face_acedatacloud
+display_name: Face Transform by Ace Data Cloud
+short_desc: Analyze facial keypoints in an authorized image from AstrBot chat.
+desc: Use Ace Data Cloud Face Analyze to inspect face landmarks and image dimensions. This version offers analysis only.
+version: 0.1.0
+author: acedatacloud
+repo: https://github.com/AceDataCloud/FaceAstrBot
+astrbot_version: ">=4.28.2,<5"
+tags:
+  - Face Transform
+  - Face Analyze
+  - face keypoints
+  - Ace Data Cloud

@@ -1,0 +1,9 @@
+{
+  "api_key": {
+    "description": "Ace Data Cloud API key with Face Analyze access",
+    "type": "string",
+    "default": "",
+    "secret": true,
+    "hint": "Copy a General or Face service key from platform.acedata.cloud. Do not include 'Bearer '."
+  }
+}
