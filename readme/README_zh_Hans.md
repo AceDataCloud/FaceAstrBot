@@ -8,7 +8,7 @@
 
 在 AstrBot WebUI 打开 **Extensions → Plugins → AstrBot Plugin Market**，搜索 **Face Transform**。核对卡片 **Face Transform by Ace Data Cloud**、作者 **acedatacloud** 和当前 Face 服务图标，点击 **Install**，随后到 **Installed** 确认插件已启用且没有加载错误。
 
-AstrBot Cloud 尚未正式上架。源码合并发布后，可在 **Installed → Install (+) → Install from URL** 填入 `https://github.com/AceDataCloud/FaceAstrBot` 预览。URL 安装与官方市场搜索、安装是不同验收项。
+插件已在 [AstrBot Cloud](https://cloud.astrbot.app/plugin/AceDataCloud/astrbot_plugin_face_acedatacloud) 正式上架，推荐按上面的市场流程安装。也可通过 **Installed → Install (+) → Install from URL** 填入 `https://github.com/AceDataCloud/FaceAstrBot` 安装源码仓库；仓库安装是独立路径，不能代替市场安装验证。
 
 ## 2. 获取 Key 和获授权的图片
 
@@ -48,7 +48,11 @@ mode `1` 分析面积最大的人脸，mode `0` 请求分析全部人脸。工�
 
 ## 已验证的本地运行
 
-隔离的官方 AstrBot `v4.28.2` 实例中，ChatUI 对虚构示例图片实际调用 `face_analyze` 一次，返回 2048×2048 和 1 张脸。[脱敏证据](../tests/e2e-results.json)记录本地运行结果及账单归属边界。官方市场搜索和安装尚未验证。
+隔离的官方 AstrBot `v4.28.2` 实例中，ChatUI 对虚构示例图片实际调用 `face_analyze` 一次，返回 2048×2048 和 1 张脸。[脱敏证据](../tests/e2e-results.json)记录本地运行结果及账单归属边界。
+
+## 已验证的市场安装
+
+2026-10-12，[Cloud 公开卡片](https://cloud.astrbot.app/plugin/AceDataCloud/astrbot_plugin_face_acedatacloud)显示版本 `0.1.0`。独立的全新 AstrBot `v4.28.2` 实例通过官方市场安装，读回 `install_method: market` 与 `activated: true`。ChatUI 仅对已授权的虚构人像调用一次 `face_analyze`，返回 2048×2048 图像中的一张脸。响应没有 trace ID，因此不声称精确匹配某一条账单。[脱敏市场证据](https://github.com/AceDataCloud/Index/blob/main/plans/ecosystem-growth/agent-provider-onboarding/execution/evidence/astrbot-market-20261012.json)记录安装与调用。
 
 ## 品牌素材
 

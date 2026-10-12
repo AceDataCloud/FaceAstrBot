@@ -8,7 +8,7 @@ Analyze face keypoints in an authorized HTTPS image from AstrBot chat through yo
 
 In AstrBot WebUI, open **Extensions → Plugins → AstrBot Plugin Market** and search **Face Transform**. Check for **Face Transform by Ace Data Cloud**, author **acedatacloud**, and the Face service icon. Choose **Install**, then verify it is enabled without a load error under **Installed**.
 
-The AstrBot Cloud listing has not yet been published. After the source release is merged, **Installed → Install (+) → Install from URL** with `https://github.com/AceDataCloud/FaceAstrBot` offers a preview. URL installation is separate from official market discovery and installation.
+The plugin is published in [AstrBot Cloud](https://cloud.astrbot.app/plugin/AceDataCloud/astrbot_plugin_face_acedatacloud). Prefer the market installation above. **Installed → Install (+) → Install from URL** with `https://github.com/AceDataCloud/FaceAstrBot` is also available; a repository installation is a separate path and does not validate market installation.
 
 ## 2. Get a key and an authorized image
 
@@ -48,7 +48,11 @@ The plugin sends the key only to `https://api.acedata.cloud`, rejects redirects,
 
 ## Verified local run
 
-On an isolated official AstrBot `v4.28.2` instance, ChatUI invoked `face_analyze` once for the fictional example image and returned one face in a 2048×2048 image. [Sanitized evidence](tests/e2e-results.json) records the local runtime result and its billing attribution limit. Public market discovery and install remain unverified.
+On an isolated official AstrBot `v4.28.2` instance, ChatUI invoked `face_analyze` once for the fictional example image and returned one face in a 2048×2048 image. [Sanitized evidence](tests/e2e-results.json) records the local runtime result and its billing attribution limit.
+
+## Verified market installation
+
+On 2026-10-12, the public [Cloud listing](https://cloud.astrbot.app/plugin/AceDataCloud/astrbot_plugin_face_acedatacloud) reported version `0.1.0`. A separate clean AstrBot `v4.28.2` instance installed the package through the official market and read back `install_method: market` and `activated: true`. ChatUI called `face_analyze` once on an authorized fictional portrait and returned one face at 2048×2048. The response contained no trace ID, so an exact billing-row match is not claimed. [Sanitized market evidence](https://github.com/AceDataCloud/Index/blob/main/plans/ecosystem-growth/agent-provider-onboarding/execution/evidence/astrbot-market-20261012.json) records the installation and call.
 
 ## Brand asset
 
