@@ -2,7 +2,7 @@
 
 Analyze face keypoints in an authorized HTTPS image from AstrBot chat through your own Ace Data Cloud account. This first plugin version offers **Face Analyze** only; beautification, aging, swapping, cartoon, and liveness operations are not included.
 
-[简体中文指南](readme/README_zh_Hans.md) · [Face API](https://platform.acedata.cloud/documents) · [Current prices](https://platform.acedata.cloud/models)
+[简体中文指南](readme/README_zh_Hans.md) · [Face API](https://platform.acedata.cloud/documents?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=faceastrbot_readme_documents) · [Current prices](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=faceastrbot_readme_pricing)
 
 ## 1. Find and install
 
@@ -12,7 +12,9 @@ The AstrBot Cloud listing has not yet been published. After the source release i
 
 ## 2. Get a key and an authorized image
 
-Sign in at [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications). Copy the **General application** API key or use **Manage Keys → Create** to make a dedicated AstrBot key. A service-specific key must permit `/face/analyze`. Face Analyze access may depend on your account entitlement. Check current pricing and balance before running it.
+New account? Register and sign in first. If the Applications page has no General application yet, choose **Initialize General Application**, then continue with the key steps below.
+
+Sign in at [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=faceastrbot_readme_api_key). Copy the **General application** API key or use **Manage Keys → Create** to make a dedicated AstrBot key. A service-specific key must permit `/face/analyze`. Face Analyze access may depend on your account entitlement. Check current pricing and balance before running it.
 
 Use only an image you own or have permission to process. The first-run example below uses a previously generated fictional test portrait. The URL must be public HTTPS; this plugin does not upload local files. Copy only the API key value, without `Bearer `, and do not use a `platform-...` management token.
 
