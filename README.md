@@ -2,13 +2,19 @@
 
 Analyze face keypoints in an authorized HTTPS image from AstrBot chat through your own Ace Data Cloud account. This first plugin version offers **Face Analyze** only; beautification, aging, swapping, cartoon, and liveness operations are not included.
 
+This independent **Face Transform integration is provided by Ace Data Cloud**; it is not an official plugin from the Face Transform publisher or the AstrBot team. Use your own Ace API key.
+
 [简体中文指南](readme/README_zh_Hans.md) · [Face API](https://platform.acedata.cloud/documents?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=faceastrbot_readme_documents) · [Current prices](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=faceastrbot_readme_pricing)
 
 ## 1. Find and install
 
-In AstrBot WebUI, open **Extensions → Plugins → AstrBot Plugin Market** and search **Face Transform**. Check for **Face Transform by Ace Data Cloud**, author **acedatacloud**, and the Face service icon. Choose **Install**, then verify it is enabled without a load error under **Installed**.
+Current upstream navigation is **Plugins → Plugins → Plugin Market / Installed**; older English versions may label the section Extensions. Search **Face Transform** and verify **Face Transform by Ace Data Cloud**, author **acedatacloud**, and the matching service icon.
 
-The plugin is published in [AstrBot Cloud](https://cloud.astrbot.app/plugin/AceDataCloud/astrbot_plugin_face_acedatacloud). Prefer the market installation above. **Installed → Install (+) → Install from URL** with `https://github.com/AceDataCloud/FaceAstrBot` is also available; a repository installation is a separate path and does not validate market installation.
+An [official Cloud listing](https://cloud.astrbot.app/plugin/AceDataCloud/astrbot_plugin_face_acedatacloud) exists at market version `0.1.0`. Select **Install**, then check that it is enabled without a load error under **Installed**. This PR’s `0.1.1` is a documentation/image update and is not yet a Cloud release; merging source does not update the market package.
+
+Repository installation: **Plugins → Plugins → Installed → Install Plugin (+) → Install from URL**, with `https://github.com/AceDataCloud/FaceAstrBot`. Source is already available. Confirm it is enabled and loaded. A repository/file installation is a separate path from official market installation.
+
+**Access restriction:** the current Ace service catalog marks this service private/restricted. Installing the plugin does not grant service entitlement. Use an already entitled account or confirm eligibility first; do not send a paid trial request just to test access. This flag alone does not mean the service is retired.
 
 ## 2. Get a key and an authorized image
 
@@ -18,11 +24,27 @@ Sign in at [Ace Data Cloud Applications](https://platform.acedata.cloud/console/
 
 Use only an image you own or have permission to process. The first-run example below uses a previously generated fictional test portrait. The URL must be public HTTPS; this plugin does not upload local files. Copy only the API key value, without `Bearer `, and do not use a `platform-...` management token.
 
+### Token screenshots: copy or create a dedicated key
+
+[Register or sign in to Ace](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=faceastrbot_readme_signup), then open **Applications → General application** and initialize it if absent. Use **1** to copy the selected key, or **2 Manage Keys → Create** for a dedicated key. If Allowed APIs is enabled, include `/face/analyze`; check current entitlement, balance and prices before use.
+
+![Copy an Ace key or open Manage Keys (redacted)](_assets/tutorial/get-api-key-en.png)
+
+Use a name such as `AstrBot Face Transform` and set expiry/limits as needed. The screenshot’s `Dify tutorial` is an older example, not a required label.
+
+![Create an optional dedicated API key (shared Ace page, not AstrBot)](_assets/tutorial/create-api-key-en.png)
+
+Images were reused and checked on **2026-10-19**; original capture dates are unknown. Credentials, App ID and balance are redacted. This is the shared Ace Applications UI, not proof of AstrBot installation or a live service call. [Image sources and limits](_assets/tutorial/sources.json).
+
+### Where to paste it in AstrBot
+
+Open **Plugins → Plugins → Installed**, select the gear (**Plugin Configuration**) on **Face Transform by Ace Data Cloud**, paste the key into **Ace Data Cloud API key with Face Analyze access** (stored field `api_key`), and save. Paste the key only, with no `Bearer ` prefix; never put it in model-provider settings or a chat prompt. UI masking does not encrypt the data-directory config. These are exact text steps; no fabricated settings image is used.
+
 ## 3. Configure AstrBot
 
-Under **Extensions → Plugins → Installed**, select the gear icon on **Face Transform by Ace Data Cloud**. Paste the key into **Ace Data Cloud API key with Face Analyze access** and save. The dashboard masks the input, while the AstrBot data directory stores the original value; protect that directory.
+Under **Plugins → Plugins → Installed**, select the gear icon on **Face Transform by Ace Data Cloud**. Paste the key into **Ace Data Cloud API key with Face Analyze access** and save. The dashboard masks the input, while the AstrBot data directory stores the original value; protect that directory.
 
-Choose a chat model with tool calling and allow `face_analyze` for the active profile and persona. Check **Extensions → Handlers** if the tool is unavailable.
+Choose a chat model with tool calling and allow `face_analyze` for the active profile and persona. Check **Plugins → Manage Behaviors → Function Tools** if the tool is unavailable.
 
 ## 4. Analyze once in chat
 
