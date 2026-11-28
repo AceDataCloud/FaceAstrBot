@@ -18,15 +18,13 @@
 
 ## 2. 获取 Key 和获授权的图片
 
-首次使用请先注册并登录；如果应用页还没有通用应用，点击 **初始化通用应用（Initialize General Application）**，再按下面步骤管理密钥。
-
 登录 [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=astrbot&utm_medium=referral&utm_campaign=evergreen)，复制 **General application** API Key，或在 **Manage Keys → Create** 创建 AstrBot 专用 Key。服务专用 Key 必须允许 `/face/analyze`。Face Analyze 权限可能取决于账号开通情况；调用前检查当前价格和余额。
 
 只处理自己拥有或获准处理的图片。下方示例是先前生成的虚构测试人像。图片 URL 必须是公开可访问的 HTTPS 链接；插件不会上传本地文件。只复制 Key 本身，不加 `Bearer `，也不要使用 `platform-...` 管理 Token。
 
 ### Token 图文：复制或创建专用 Key
 
-先[注册或登录 Ace](https://platform.acedata.cloud/console/applications?utm_source=astrbot&utm_medium=referral&utm_campaign=evergreen)，打开 **Applications → General application**；没有通用应用时先初始化。图中 **1** 复制现有 Key，**2 Manage Keys → Create** 创建专用 Key。API 限制开启时应包含 `/face/analyze`，并检查账户当前权限、余额与价格。
+先[注册或登录 Ace](https://platform.acedata.cloud/console/applications?utm_source=astrbot&utm_medium=referral&utm_campaign=evergreen)，打开 **Applications → General application**。图中 **1** 复制现有 Key，**2 Manage Keys → Create** 创建专用 Key。API 限制开启时应包含 `/face/analyze`，并检查账户当前权限、余额与价格。
 
 ![Ace 应用页复制 Key 或管理 Key（已脱敏）](../_assets/tutorial/get-api-key-en.png)
 

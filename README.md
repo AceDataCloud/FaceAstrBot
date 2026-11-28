@@ -18,15 +18,13 @@ Repository installation: **Plugins → Plugins → Installed → Install Plugin 
 
 ## 2. Get a key and an authorized image
 
-New account? Register and sign in first. If the Applications page has no General application yet, choose **Initialize General Application**, then continue with the key steps below.
-
 Sign in at [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=astrbot&utm_medium=referral&utm_campaign=evergreen). Copy the **General application** API key or use **Manage Keys → Create** to make a dedicated AstrBot key. A service-specific key must permit `/face/analyze`. Face Analyze access may depend on your account entitlement. Check current pricing and balance before running it.
 
 Use only an image you own or have permission to process. The first-run example below uses a previously generated fictional test portrait. The URL must be public HTTPS; this plugin does not upload local files. Copy only the API key value, without `Bearer `, and do not use a `platform-...` management token.
 
 ### Token screenshots: copy or create a dedicated key
 
-[Register or sign in to Ace](https://platform.acedata.cloud/console/applications?utm_source=astrbot&utm_medium=referral&utm_campaign=evergreen), then open **Applications → General application** and initialize it if absent. Use **1** to copy the selected key, or **2 Manage Keys → Create** for a dedicated key. If Allowed APIs is enabled, include `/face/analyze`; check current entitlement, balance and prices before use.
+[Register or sign in to Ace](https://platform.acedata.cloud/console/applications?utm_source=astrbot&utm_medium=referral&utm_campaign=evergreen), then open **Applications → General application**. Use **1** to copy the selected key, or **2 Manage Keys → Create** for a dedicated key. If Allowed APIs is enabled, include `/face/analyze`; check current entitlement, balance and prices before use.
 
 ![Copy an Ace key or open Manage Keys (redacted)](_assets/tutorial/get-api-key-en.png)
 
